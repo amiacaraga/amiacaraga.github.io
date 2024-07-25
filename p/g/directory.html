@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta property="og:image" content="https://firebasestorage.googleapis.com/v0/b/photos-cd20a.appspot.com/o/directory.jpg?alt=media&token=cc20534e-81cc-4a64-9a41-4922c17f2022" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://amia-caraga.github.io/site/p/g/directory"/>
+  <title>AMIA Directory</title>
+  <link rel="stylesheet" href="../../vendors/feather/feather.css">
+  <link rel="stylesheet" href="../../vendors/ti-icons/css/themify-icons.css">
+  <link rel="stylesheet" href="../../vendors/css/vendor.bundle.base.css">
+  <link rel="stylesheet" href="../../css/vertical-layout-light/style.css">
+  <link rel="shortcut icon" href="../../images/favicon.png" />
+  <style>
+    .pagination {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .pagination button {
+      margin: 0 5px;
+      padding: 5px 10px;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container-scroller">
+    <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+      <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+        <a class="navbar-brand brand-logo mr-5" href="../../index"><img src="../../images/logos/logo.png" class="mr-2" alt="logo"/></a>
+        <a class="navbar-brand brand-logo-mini" href="../../index"><img src="../../images/logo-mini.svg" alt="logo"/></a>
+      </div>
+      <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
+        <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+          <span class="icon-menu"></span>
+        </button>
+        <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+          <span class="icon-menu"></span>
+        </button>
+      </div>
+    </nav>
+    <div class="container-fluid page-body-wrapper">
+      <nav class="sidebar sidebar-offcanvas" id="sidebar">
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link" href="../../index">
+              <i class="icon-grid menu-icon"></i>
+              <span class="menu-title">Dashboard</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+              <i class="icon-layout menu-icon"></i>
+              <span class="menu-title">AMIA</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="ui-basic">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="../../p/g/regional-profile">About</a></li>
+                <li class="nav-item"> <a class="nav-link" href="../../p/g/mandate">Mandate</a></li>
+                <li class="nav-item"> <a class="nav-link" href="../../p/g/directory">Directory</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../../p/g/amia-tour">
+              <i class="icon-columns menu-icon"></i>
+              <span class="menu-title">AMIATour</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../../p/g/success-stories">
+              <i class="icon-paper menu-icon"></i>
+              <span class="menu-title">Success Stories</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../../p/g/decision-support">
+              <i class="icon-contract menu-icon"></i>
+              <span class="menu-title">Decision Support</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../../p/g/offices">
+              <i class="icon-grid-2 menu-icon"></i>
+              <span class="menu-title">Attached Offices</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../../p/g/opportunities">
+              <i class="icon-circle-plus menu-icon"></i>
+              <span class="menu-title">Opportunities</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <!-- partial -->
+      <div class="main-panel">
+        <div class="content-wrapper">
+          <div class="row">
+            <div class="col-lg-12 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <div class="table-responsive">
+                    <table class="table table-hover">
+                      <thead>
+                        <tr>
+                          <th>
+                            Name
+                          </th>
+                          <th>
+                            Designation
+                          </th>
+                          <th>
+                            Station
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody id="directory-list">
+                        <!-- Directory entries -->
+                        <tr>
+                          <td>Arlan M. Mangelen</td>
+                          <td>Regional Executive Director</td>
+                          <td>DA Caraga</td>
+                        </tr>
+                        <tr>
+                          <td>Rebecca R. Atega</td>
+                          <td>AMIA Focal Person</td>
+                          <td>DA Caraga</td>
+                        </tr>
+                        <tr>
+                          <td>Marco Antonio C. Morido</td>
+                          <td>AMIA Program Leader</td>
+                          <td>DA Caraga</td>
+                        </tr>
+                        <tr>
+                          <td>Gerlie B. Antipaso</td>
+                          <td>AMIA Alternate Program Leader</td>
+                          <td>DA Caraga</td>
+                        </tr>
+                        <tr>
+                          <td>Sheryl L. Sajulan</td>
+                          <td>Report Officer/AMIA Technical Staff</td>
+                          <td>DA Caraga</td>
+                        </tr>
+                        <tr>
+                          <td>Rosemarie D. Otto</td>
+                          <td>Clerical Staff</td>
+                          <td>DA Caraga</td>
+                        </tr>
+                        <tr>
+                          <td>Lynn A. Pareñas</td>
+                          <td>Chief, AMAD</td>
+                          <td>DA Caraga</td>
+                        </tr>
+                        <tr>
+                          <td>Engr. Rene Q. Morales</td>
+                          <td>Chief, RAED</td>
+                          <td>DA Caraga</td>
+                        </tr>
+                        <tr>
+                          <td>Melody M. Guimary</td>
+                          <td>Chief, FOD/Rice and Corn Coordinator</td>
+                          <td>DA Caraga</td>
+                        </tr>
+                        <tr>
+                          <td>Emmylou T. Prisilda</td>
+                          <td>Chief, RAFIS</td>
+                          <td>DA Caraga</td>
+                        </tr>
+                        <tr>
+                          <td>Fatima D. Campos</td>
+                          <td>Budget Officer</td>
+                          <td>DA Caraga</td>
+                        </tr>
+                        <tr>
+                          <td>Jekem D. Sanchez</td>
+                          <td>Livestock Coordinator</td>
+                          <td>DA Caraga</td>
+                        </tr>
+                        <tr>
+                          <td>Cindy B. Bangod</td>
+                          <td>Organic Agriculture Coordinator</td>
+                          <td>DA Caraga</td>
+                        </tr>
+                        <tr>
+                          <td>Dailinda Mamalis</td>
+                          <td>HVCD Coordinator</td>
+                          <td>DA Caraga</td>
+                        </tr>
+                        <tr>
+                          <td>Catherine P. Nanale</td>
+                          <td>Planning Officer</td>
+                          <td>DA Caraga</td>
+                        </tr>
+                        <tr>
+                          <td>Menchie A. Samorano</td>
+                          <td>M&E Officer</td>
+                          <td>DA Caraga</td>
+                        </tr>
+                        <tr>
+                          <td>Jeff A. Alaan</td>
+                          <td>GIS Officer</td>
+                          <td>DA Caraga</td>
+                        </tr>
+                        <tr>
+                          <td>Noli G. Orog</td>
+                          <td>OIC-Chief</td>
+                          <td>APCO Agusan del Norte</td>
+                        </tr>
+                        <tr>
+                          <td>Menche Mae G. Parina</td>
+                          <td>OIC-Chief</td>
+                          <td>APCO Surigao del Norte</td>
+                        </tr>
+                        <tr>
+                          <td>Rey U. Frias</td>
+                          <td>Chief</td>
+                          <td>APCO Province of Dinagat Islands</td>
+                        </tr>
+                        <tr>
+                          <td>June Anthony S. Ouano</td>
+                          <td>Chief</td>
+                          <td>APCO Agusan del Sur</td>
+                        </tr>
+                        <tr>
+                          <td>Alvin C. Asuncion</td>
+                          <td>OIC-Chief</td>
+                          <td>APCO Surigao del Sur</td>
+                        </tr>
+                        <tr>
+                          <td>Ferdinand S. Baguio, Jr.</td>
+                          <td>AMIA Technical Staff</td>
+                          <td>APCO Agusan del Norte</td>
+                        </tr>
+                        <tr>
+                          <td>Elineth P. Amper</td>
+                          <td>AMIA Technical Staff</td>
+                          <td>APCO Surigao del Norte</td>
+                        </tr>
+                        <tr>
+                          <td>Kenneth Aldrin R. Sabaldan</td>
+                          <td>AMIA Technical Staff</td>
+                          <td>APCO Province of Dinagat Islands</td>
+                        </tr>
+                        <tr>
+                          <td>Mark Louie C. Bacalso</td>
+                          <td>AMIA Technical Staff</td>
+                          <td>APCO Agusan del Sur</td>
+                        </tr>
+                        <tr>
+                          <td>Jerome H. Lopez</td>
+                          <td>AMIA Technical Staff</td>
+                          <td>APCO Agusan del Sur</td>
+                        </tr>
+                        <tr>
+                          <td>John Patrick S. Cadavos</td>
+                          <td>AMIA Technical Staff</td>
+                          <td>APCO Surigao del Sur</td>
+                        </tr>
+                        <tr>
+                          <td>Shaira Dale Espanto</td>
+                          <td>AMIA Technical Staff</td>
+                          <td>APCO Surigao del Sur</td>
+                        </tr>
+                        <tr>
+                          <td>Andrew S. Auguis</td>
+                          <td>CIS Focal Person</td>
+                          <td>DA Caraga</td>
+                        </tr>
+                        <tr>
+                          <td>James E. Rosales</td>
+                          <td>Computer Programmer</td>
+                          <td>DA Caraga</td>
+                        </tr>
+                        <tr>
+                          <td>Rosary Anne M. Serrano</td>
+                          <td>Field Assistant</td>
+                          <td>DA Caraga</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <div class="pagination">
+                      <button onclick="prevPage()" id="prev-btn" class="hidden btn btn-outline-secondary btn-sm">Previous</button>
+                      <button onclick="nextPage()" id="next-btn" class="hidden btn btn-outline-secondary btn-sm">Next</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- content-wrapper ends -->
+        <!-- partial:../../partials/_footer -->
+        <footer class="footer">
+          <div class="d-sm-flex justify-content-center justify-content-sm-between">
+            <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2024. <a href="../../index">AMIA Caraga </a>| All rights reserved.</span>
+          </div>
+        </footer>
+        <!-- partial -->
+      </div>
+      <!-- main-panel ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
+  </div>
+  <!-- container-scroller -->
+  <!-- plugins:js -->
+  <script src="../../vendors/js/vendor.bundle.base.js"></script>
+  <!-- endinject -->
+  <!-- Plugin js for this page -->
+  <!-- End plugin js for this page -->
+  <!-- inject:js -->
+  <script src="../../js/off-canvas.js"></script>
+  <script src="../../js/hoverable-collapse.js"></script>
+  <script src="../../js/template.js"></script>
+  <script src="../../js/settings.js"></script>
+  <script src="../../js/todolist.js"></script>
+  <!-- endinject -->
+  <!-- Custom js for this page-->
+  <script>
+    const rowsPerPage = 5;
+    let currentPage = 1;
+    const rows = document.querySelectorAll('#directory-list tr');
+    const totalPages = Math.ceil(rows.length / rowsPerPage);
+
+    function displayRows(page) {
+      const start = (page - 1) * rowsPerPage;
+      const end = start + rowsPerPage;
+      rows.forEach((row, index) => {
+        row.classList.add('hidden');
+        if (index >= start && index < end) {
+          row.classList.remove('hidden');
+        }
+      });
+    }
+
+    function updateButtons() {
+      document.getElementById('prev-btn').classList.toggle('hidden', currentPage === 1);
+      document.getElementById('next-btn').classList.toggle('hidden', currentPage === totalPages);
+    }
+
+    function prevPage() {
+      if (currentPage > 1) {
+        currentPage--;
+        displayRows(currentPage);
+        updateButtons();
+      }
+    }
+
+    function nextPage() {
+      if (currentPage < totalPages) {
+        currentPage++;
+        displayRows(currentPage);
+        updateButtons();
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      displayRows(currentPage);
+      updateButtons();
+    });
+  </script>
+  <!-- End custom js for this page-->
+</body>
+
+</html>

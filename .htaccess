@@ -1,0 +1,57 @@
+# Enable Rewrite Engine
+RewriteEngine On
+
+# Redirect non-www to www
+RewriteCond %{HTTP_HOST} !^www\.
+RewriteRule ^(.*)$ http://www.%{HTTP_HOST}/$1 [R=301,L]
+
+# Redirect HTTP to HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Rewrite rule to serve .html files for clean URLs
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([^\.]+)$ $1.html [NC,L]
+
+# Prevent directory listing
+Options -Indexes
+
+# Protect .htaccess file
+<Files .htaccess>
+  Order Allow,Deny
+  Deny from all
+</Files>
+
+# Prevent access to other sensitive files
+<FilesMatch "\.(htaccess|htpasswd|ini|log|sh|bak|sql)$">
+  Order Allow,Deny
+  Deny from all
+</FilesMatch>
+
+# Disable server signature
+ServerSignature Off
+
+# Enable XSS and clickjacking protection
+Header set X-XSS-Protection "1; mode=block"
+Header always append X-Frame-Options DENY
+Header set X-Content-Type-Options nosniff
+
+# Set Content Security Policy (CSP)
+Header set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline';"
+
+# Set Referrer-Policy
+Header set Referrer-Policy "no-referrer-when-downgrade"
+
+# Set Strict-Transport-Security
+Header set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+
+# MIME type sniffing protection
+Header set X-Content-Type-Options nosniff
+
+# Prevent MIME-type sniffing
+Header set X-Content-Type-Options "nosniff"
+
+# Disable TRACE method
+RewriteCond %{REQUEST_METHOD} ^TRACE
+RewriteRule .* - [F]
