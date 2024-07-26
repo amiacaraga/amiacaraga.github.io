@@ -14,11 +14,16 @@
         firebase.initializeApp(firebaseConfig);
 
         // Check if user is already logged in
+
+
         firebase.auth().onAuthStateChanged(function(user) {
             if (user) {
-                window.location.href = "https://amiacaraga.github.io/p/g/home";
+              console.log("User is signed in.");
+              window.location.href = "home.html";
+            } else {
+              console.log("No user is signed in.");
             }
-        });
+          });
 
         function login() {
             var email = document.getElementById('email').value;
