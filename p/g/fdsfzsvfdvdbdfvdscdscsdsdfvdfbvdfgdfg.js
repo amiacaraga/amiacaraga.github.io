@@ -10,16 +10,18 @@ const firebaseConfig = {
     measurementId: "G-SP922RR158"
 };
 // Initialize Firebase
-firebase.initializeApp(firebaseConfig);
+if (!firebase.apps.length) {
+    firebase.initializeApp(firebaseConfig);
+  }
 
-// Check if user is already logged in
-firebase.auth().onAuthStateChanged(function(user) {
-    if (user) {
-      console.log("User is signed in.");
-      window.location.href = "home.html";
-    } else {
-      console.log("No user is signed in.");
-    }
+  // Check if user is already logged in
+  firebase.auth().onAuthStateChanged(function(user) {
+      if (user) {
+        console.log("User is signed in.");
+        window.location.href = "home.html";
+      } else {
+        console.log("No user is signed in.");
+      }
   });
 
 function register() {
