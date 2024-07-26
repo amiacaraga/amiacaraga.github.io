@@ -147,54 +147,7 @@
   <!-- Custom js for this page-->
   <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-database.js"></script>
-  <script>
-    // Your web app's Firebase configuration
-    var firebaseConfig = {
-      apiKey: "AIzaSyC8XEQaJGiHqFv2CK-r9_QOk-6Otew4kh4",
-      authDomain: "opportunities-d01bd.firebaseapp.com",
-      databaseURL: "https://opportunities-d01bd-default-rtdb.firebaseio.com",
-      projectId: "opportunities-d01bd",
-      storageBucket: "opportunities-d01bd.appspot.com",
-      messagingSenderId: "892103627176",
-      appId: "1:892103627176:web:8a49af727e9a959710cd9d",
-    };
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
-
-    function displayData() {
-      firebase.database().ref("content").on("value", function(snapshot) {
-        var table = document.getElementById("data-table");
-        table.innerHTML = ""; // Clear existing table data
-        var data = [];
-
-        snapshot.forEach(function(childSnapshot) {
-          var childData = childSnapshot.val();
-          data.push(childData);
-        });
-
-        // Sort data by deadline in descending order
-        data.sort(function(a, b) {
-          return new Date(b.deadline) - new Date(a.deadline);
-        });
-
-        // Display sorted data
-        data.forEach(function(item) {
-          var newRow = document.createElement('tr');
-          newRow.innerHTML = `
-            <td>${item.assignment}</td>
-            <td>${item.position}</td>
-            <td>${item.salaryGrade}</td>
-            <td>${item.deadline}</td>
-            <td><a href="${item.link}">Click Here</a></td>
-          `;
-          table.appendChild(newRow);
-        });
-      });
-    }
-
-    // Display existing data on load
-    window.onload = displayData;
-  </script>
+  <script src="vcvndjddsfhsdkjfdjgbszkdfkndssjffs.js"></script>
   <!-- End custom js for this page-->
 </body>
 </html>
