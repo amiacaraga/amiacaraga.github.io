@@ -1,4 +1,5 @@
-// Firebase configuration
+
+        // Firebase configuration
         const firebaseConfig = {
             apiKey: "AIzaSyBvCo3oKxF7VaGyvqzcXl4BYEYmzgAkyVM",
             authDomain: "amia-caraga-website.firebaseapp.com",
@@ -15,7 +16,7 @@
         // Check if user is already logged in
         firebase.auth().onAuthStateChanged(function(user) {
             if (user) {
-                window.location.href = "home.html";
+                window.location.href = "https://amiacaraga.github.io/p/g/home";
             }
         });
 

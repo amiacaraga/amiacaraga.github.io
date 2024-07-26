@@ -15,7 +15,7 @@ firebase.initializeApp(firebaseConfig);
 // Check if user is already logged in
 firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
-        window.location.href = "home.html";
+        window.location.href = "https://amiacaraga.github.io/p/g/home";
     }
 });
 
