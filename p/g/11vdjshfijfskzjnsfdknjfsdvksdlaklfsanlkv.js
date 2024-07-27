@@ -23,8 +23,8 @@ function fetchSuccessStories() {
       stories.push(story);
     });
 
-    // Sort stories by timestamp in descending order
-    stories.sort((a, b) => b.timestamp - a.timestamp);
+    // Sort stories by date in descending order
+    stories.sort((a, b) => new Date(b.date) - new Date(a.date));
 
     var count = 0;
     var row;
