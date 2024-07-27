@@ -311,98 +311,104 @@
             <button onclick="showSection('job-opportunity-form')">Add Job Opportunity</button>
         </div>
         <div id="success-story-form" class="success-story-form">
-            <h2 style="color: #FDA92A;">Success Story Data Management</h2>
-            <form>
-                <div class="form-group">
-                    <label for="image">Image Link</label>
-                    <input type="text" id="image" placeholder="https://example.com/image.png"><br>
+            <div class="row">
+                <div class="col-md-6">
+                    <table id="data-table-story">
+                        <thead>
+                            <tr>
+                                <th>Title</th>
+                                <th>Author</th>
+                                <th>Date</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table></div>
+                <div class="col-md-6">
+                    <form>
+                        <div class="form-group">
+                            <label for="image">Image Link</label>
+                            <input type="text" id="image" placeholder="https://example.com/image.png"><br>
+                        </div>
+                        <div class="form-group">
+                            <label for="title">Title</label>
+                            <input type="text" id="title" placeholder="Title should not exceed 25 words."><br>
+                        </div>
+                        <div class="form-group">
+                            <label for="date">Date</label>
+                            <input type="date" id="date"><br>
+                        </div>
+                        <div class="form-group">
+                            <label for="author">Author</label>
+                            <input type="text" id="author" placeholder="Author"><br>
+                        </div>
+                        <div class="form-group">
+                            <label for="office">Office</label>
+                            <input type="text" id="office" placeholder="Office"><br>
+                        </div>
+                        <div class="form-group">
+                            <label for="description">Description</label>
+                            <input type="text" id="description" placeholder="Description should not exceed 25 words."><br>
+                        </div>
+                        <div class="form-group">
+                            <label for="content">Content</label>
+                            <input type="text" id="content" placeholder="Content should not exceed 3000 words."><br>
+                        </div>
+                        <div class="form-group">
+                            <button type="button" id="insert-story">Insert</button>
+                        </div>
+                    </form>
                 </div>
-                <div class="form-group">
-                    <label for="title">Title</label>
-                    <input type="text" id="title" placeholder="Title should not exceed 25 words."><br>
-                </div>
-                <div class="form-group">
-                    <label for="date">Date</label>
-                    <input type="date" id="date"><br>
-                </div>
-                <div class="form-group">
-                    <label for="author">Author</label>
-                    <input type="text" id="author" placeholder="Author"><br>
-                </div>
-                <div class="form-group">
-                    <label for="office">Office</label>
-                    <input type="text" id="office" placeholder="Office"><br>
-                </div>
-                <div class="form-group">
-                    <label for="description">Description</label>
-                    <input type="text" id="description" placeholder="Description should not exceed 25 words."><br>
-                </div>
-                <div class="form-group">
-                    <label for="content">Content</label>
-                    <input type="text" id="content" placeholder="Content should not exceed 3000 words."><br>
-                </div>
-                <div class="form-group">
-                    <button type="button" id="insert-story">Insert</button>
-                </div>
-            </form>
-
-            <table id="data-table-story">
-                <thead>
-                    <tr>
-                        <th>Title</th>
-                        <th>Author</th>
-                        <th>Date</th>
-                        <th>Action</th>
-                    </tr>
-                </thead>
-                <tbody></tbody>
-            </table>
+            </div>
         </div>
         <div id="job-opportunity-form" class="job-opportunity-form">
-            <h2 style="color: #FDA92A;">Job Posting Data Management</h2>
-            <form>
-                <div class="form-group">
-                    <label for="postingNumber">Posting Number</label>
-                    <input type="text" id="postingNumber" placeholder="Posting Number"><br>
+            <div class="row">
+                <div class="col-md-6">
+                    <table id="data-table-job">
+                        <thead>
+                            <tr>
+                                <th>Assignment</th>
+                                <th>Position</th>
+                                <th>Salary Grade</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
                 </div>
-                <div class="form-group">
-                    <label for="assignment">Place of Assignment</label>
-                    <input type="text" id="assignment" placeholder="Place of Assignment"><br>
+                <div class="col-md-6">
+                    <form>
+                        <div class="form-group">
+                            <label for="postingNumber">Posting Number</label>
+                            <input type="text" id="postingNumber" placeholder="Posting Number"><br>
+                        </div>
+                        <div class="form-group">
+                            <label for="assignment">Place of Assignment</label>
+                            <input type="text" id="assignment" placeholder="Place of Assignment"><br>
+                        </div>
+                        <div class="form-group">
+                            <label for="position">Position</label>
+                            <input type="text" id="position" placeholder="Position"><br>
+                        </div>
+                        <div class="form-group">
+                            <label for="salaryGrade">Salary Grade</label>
+                            <input type="text" id="salaryGrade" placeholder="Salary Grade"><br>
+                        </div>
+                        <div class="form-group">
+                            <label for="deadline">Deadline of Submission</label>
+                            <input type="date" id="deadline"><br>
+                        </div>
+                        <div class="form-group">
+                            <label for="link">File Google Drive Link</label>
+                            <input type="text" id="link" placeholder="https://drive.google.example"><br>
+                        </div>
+                        <div class="form-group">
+                            <button type="button" id="insert-job">Insert</button>
+                        </div>
+                    </form>
                 </div>
-                <div class="form-group">
-                    <label for="position">Position</label>
-                    <input type="text" id="position" placeholder="Position"><br>
-                </div>
-                <div class="form-group">
-                    <label for="salaryGrade">Salary Grade</label>
-                    <input type="text" id="salaryGrade" placeholder="Salary Grade"><br>
-                </div>
-                <div class="form-group">
-                    <label for="deadline">Deadline of Submission</label>
-                    <input type="date" id="deadline"><br>
-                </div>
-                <div class="form-group">
-                    <label for="link">File Google Drive Link</label>
-                    <input type="text" id="link" placeholder="https://drive.google.example"><br>
-                </div>
-                <div class="form-group">
-                    <button type="button" id="insert-job">Insert</button>
-                </div>
-            </form>
-
-            <table id="data-table-job">
-                <thead>
-                    <tr>
-                        <th>Assignment</th>
-                        <th>Position</th>
-                        <th>Salary Grade</th>
-                        <th>Action</th>
-                    </tr>
-                </thead>
-                <tbody></tbody>
-            </table>
+            </div>
         </div>
-    </div>
 
     <!-- Modal Structure -->
     <div id="delete-modal" class="modal">
