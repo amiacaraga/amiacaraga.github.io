@@ -16,11 +16,20 @@ function fetchSuccessStories() {
   firebase.database().ref('publicStories').once('value').then(function(snapshot) {
     var container = document.getElementById('success-stories-container');
     container.innerHTML = ''; // Clear any existing content
-    var count = 0;
-    var row;
+    var stories = [];
 
     snapshot.forEach(function(childSnapshot) {
       var story = childSnapshot.val();
+      stories.push(story);
+    });
+
+    // Sort stories by timestamp in descending order
+    stories.sort((a, b) => b.timestamp - a.timestamp);
+
+    var count = 0;
+    var row;
+
+    stories.forEach(function(story) {
       if (count % 3 === 0) {
         row = document.createElement('div');
         row.className = 'success-stories-row';
@@ -73,7 +82,7 @@ function showModal(image, title, date, author, office, content) {
   document.getElementById("modal-author").textContent = author;
   document.getElementById("modal-office").textContent = office;
   document.getElementById("modal-content").textContent = content;
-  
+
   modal.style.display = "block";
 }
 
