@@ -1,156 +1,305 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>Login</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta property="og:image" content="https://firebasestorage.googleapis.com/v0/b/photos-cd20a.appspot.com/o/success-stories.jpg?alt=media&token=a021fe5d-6964-4d9e-92c2-4b4f27ddcee3" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://amia-caraga.github.io/site/p/g/success-stories"/>
-    <link rel="stylesheet" href="../../vendors/feather/feather.css">
-    <link rel="stylesheet" href="../../vendors/ti-icons/css/themify-icons.css">
-    <link rel="stylesheet" href="../../vendors/css/vendor.bundle.base.css">
-    <link rel="stylesheet" href="../../css/vertical-layout-light/style.css">
-    <link rel="shortcut icon" href="../../images/favicon.png" />
-    <!-- Cool Google Fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap" rel="stylesheet">
-    <!-- Our stylesheet -->
-    <style>
-        body {
-            font-family: 'Montserrat', sans-serif;
-            background-color: #f0f2f5;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            padding: 0 10px;
-            box-sizing: border-box;
-        }
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta property="og:image" content="https://firebasestorage.googleapis.com/v0/b/photos-cd20a.appspot.com/o/thumb.png?alt=media&token=4ec99c31-3035-448c-91e2-977627345a14" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://https://amia-caraga.github.io/site"/>
 
-        #content_container {
-            display: flex;
-            width: 100%;
-            max-width: 400px;
-            margin: auto;
-            flex-direction: column;
-            align-items: center;
-        }
+  <meta name="facebook:title" content="AMIA Caraga" />
+  <meta name="facebook:card" content="summary" />
+  <meta name="facebook:description" content="Building farming and fishing communities, livelihoods, and enterprises resilient to economic and climate shocks." />
+  <meta name="facebook:image" content="https://firebasestorage.googleapis.com/v0/b/photos-cd20a.appspot.com/o/thumb.png?alt=media&token=4ec99c31-3035-448c-91e2-977627345a14" />
 
-        #form_container {
-            background: white;
-            padding: 20px;
-            box-shadow: 0px 2px 4px rgba(0,0,0,0.1);
-            border-radius: 8px;
-            width: 100%;
-            margin-bottom: 10px;
-        }
-
-        #form_header_container {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        #form_header {
-            font-size: 24px;
-            color: #1877f2;
-        }
-
-        #form_content_container {
-            display: flex;
-            flex-direction: column;
-        }
-
-        #form_content_inner_container {
-            display: flex;
-            flex-direction: column;
-        }
-
-        #email, #password {
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #dddfe2;
-            border-radius: 4px;
-            font-size: 16px;
-            width: calc(100% - 2px);
-            box-sizing: border-box;
-        }
-
-        #button_container {
-            text-align: center;
-        }
-
-        button {
-            background-color: #1877f2;
-            color: white;
-            padding: 10px 10px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 16px;
-            width: 100%;
-            box-sizing: border-box;
-        }
-
-        button:hover {
-            background-color: #1656b9;
-        }
-
-        #signup_container {
-            text-align: center;
-        }
-
-        #signup_container a {
-            color: #1877f2;
-            text-decoration: none;
-            font-size: 14px;
-        }
-
-        #signup_container a:hover {
-            text-decoration: underline;
-        }
-
-        @media (max-width: 600px) {
-            #form_header {
-                font-size: 20px;
-            }
-
-            #email, #password {
-                font-size: 14px;
-            }
-
-            button {
-                font-size: 14px;
-                padding: 8px 16px;
-            }
-        }
-    </style>
+  <meta name="twitter:title" content="AMIA Caraga" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:description" content="Building farming and fishing communities, livelihoods, and enterprises resilient to economic and climate shocks." />
+  <meta name="twitter:image" content="https://firebasestorage.googleapis.com/v0/b/photos-cd20a.appspot.com/o/thumb.png?alt=media&token=4ec99c31-3035-448c-91e2-977627345a14" />
+  
+  <title>Building farming and fishing communities, livelihoods, and enterprises resilient to economic and climate shocks.</title>
+  <!-- plugins:css -->
+  <link rel="stylesheet" href="vendors/feather/feather.css">
+  <link rel="stylesheet" href="vendors/ti-icons/css/themify-icons.css">
+  <link rel="stylesheet" href="vendors/css/vendor.bundle.base.css">
+  <!-- endinject -->
+  <!-- Plugin css for this page -->
+  <link rel="stylesheet" href="vendors/datatables.net-bs4/dataTables.bootstrap4.css">
+  <link rel="stylesheet" href="vendors/ti-icons/css/themify-icons.css">
+  <link rel="stylesheet" type="text/css" href="js/select.dataTables.min.css">
+  <!-- End plugin css for this page -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="css/vertical-layout-light/style.css">
+  <!-- endinject -->
+  <link rel="shortcut icon" href="images/favicon.png" />
 </head>
 <body>
-    <div id="content_container">
-        <div id="form_container">
-            <div id="form_header_container">
-                <h2 id="form_header">Login</h2>
+  <div class="container-scroller">
+    <!-- partial:partials/_navbar -->
+    <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+      <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+        <a class="navbar-brand brand-logo mr-5" href="index"><img src="images/logos/logo.png" class="mr-2" alt="logo"/></a>
+        <a class="navbar-brand brand-logo-mini" href="index"><img src="images/logo-mini.svg" alt="logo"/></a>
+      </div>
+      <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
+        <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+          <span class="icon-menu"></span>
+        </button>
+        <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+          <span class="icon-menu"></span>
+        </button>
+      </div>
+    </nav>
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper">
+      <!-- partial:partials/_settings-panel -->
+      <div id="right-sidebar" class="settings-panel">
+        <i class="settings-close ti-close"></i>
+        <ul class="nav nav-tabs border-top" id="setting-panel" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" id="todo-tab" data-toggle="tab" href="#todo-section" role="tab" aria-controls="todo-section" aria-expanded="true">TO DO LIST</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="chats-tab" data-toggle="tab" href="#chats-section" role="tab" aria-controls="chats-section">CHATS</a>
+          </li>
+        </ul>
+        <div class="tab-content" id="setting-content">
+          <div class="tab-pane fade show active scroll-wrapper" id="todo-section" role="tabpanel" aria-labelledby="todo-section">
+          </div>
+          <!-- To do section tab ends -->
+          
+          <!-- chat tab ends -->
+        </div>
+      </div>
+      <!-- partial -->
+      <!-- partial:partials/_sidebar -->
+      <nav class="sidebar sidebar-offcanvas" id="sidebar">
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index">
+              <i class="icon-grid menu-icon"></i>
+              <span class="menu-title">Home</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+              <i class="icon-layout menu-icon"></i>
+              <span class="menu-title">AMIA</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="ui-basic">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="p/g/regional-profile">About</a></li>
+                <li class="nav-item"> <a class="nav-link" href="p/g/mandate">Mandate</a></li>
+                <li class="nav-item"> <a class="nav-link" href="p/g/directory">Directory</a></li>
+              </ul>
             </div>
-            <div id="form_content_container">
-                <div id="form_content_inner_container">
-                    <input type="email" id="email" placeholder="Email">
-                    <input type="password" id="password" placeholder="Password">
-                    <div id="button_container">
-                        <button onclick="login()">Login</button>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="p/g/amia-tour">
+              <i class="icon-columns menu-icon"></i>
+              <span class="menu-title">AMIATour</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="p/g/success-stories">
+              <i class="icon-paper menu-icon"></i>
+              <span class="menu-title">Success Stories</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="p/g/decision-support">
+              <i class="icon-contract menu-icon"></i>
+              <span class="menu-title">Decision Support</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="p/g/offices">
+              <i class="icon-grid-2 menu-icon"></i>
+              <span class="menu-title">Attached Offices</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="p/g/opportunities">
+              <i class="icon-circle-plus menu-icon"></i>
+              <span class="menu-title">Opportunities</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <!-- partial -->
+      <div class="main-panel">
+        <div class="content-wrapper">
+          <div class="row mb-3">
+            <div class="col-md-12 grid-margin mb-3">
+              <div class="row">
+                <div class="col-12 col-xl-8 mb-3 mb-xl-2">
+                  <h3 class="font-weight-bold">Adaptation and Mitigation Initiative in Agriculture</h3>
+                  <h6 class="font-weight-normal mb-0"><span class="text-primary">Building farming and fishing communities, livelihoods, and enterprises resilient to economic and climate shocks.</span></h6>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="col-md-6 mb-3 stretch-card">
+              <div class="card tale-bg">
+                  <div class="card-people">
+                      <img class="w-100" src="images/logos/people.svg" alt="people">
+                      <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                        <img src="transparent.png" style="width: 100%; height: 100%; opacity: 0;">
+                    </div>
+                  </div>
+              </div>
+            </div>
+            <div class="col-md-6 mb-0 grid-margin transparent">
+              <div class="row mb-0 ">
+                <div class="col-md-6 mb-3 stretch-card transparent">
+                  <div class="card card-tale">
+                    <div class="card-body">
+                      <p class="mb-4">The AMIA Approach can be adopted in DA Programs towards climate-risk based planning & delivery of interventions.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 mb-3 stretch-card transparent">
+                  <div class="card card-dark-blue">
+                    <div class="card-body">
+                      <p class="mb-4">AMIA is a building block for the Farm & Fisheries Clustering & Consolidation (F2C2) Program.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 mb-3 stretch-card transparent mb-0">
+                  <div class="card card-light-blue">
+                    <div class="card-body">
+                      <p class="mb-4">Transformation of climate-resilient communities into climate-resilient business enterprises.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 mb-3 stretch-card transparent mb-0">
+                  <div class="card card-light-danger">
+                    <div class="card-body">
+                      <p class="mb-4">Climate-risk based deployment of technologies and tailor-fitted & integrated support services.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+            <div class="row mb-0">
+              <div class="col-md-12 grid-margin stretch-card mb-3">
+                <div class="lcard tale-bg">
+                    <div class="lcard-people mt-auto">
+                        <img class="w-100" src="images/logos/amia-villages.svg" alt="people">
+                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                          <img src="transparent.png" style="width: 100%; height: 100%; opacity: 0;">
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
-    <!-- Include the main script -->
-    <script src="qwerty.js"></script>
-    <script src="ssssssssssssssssssssssssswwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww.js"></script>
+            <div class="">
+              <div class="col-md-12 grid-margin stretch-card mb-3">
+                <div class="lcard tale-bg">
+                    <div class="lcard-people mt-auto">
+                        <img class="w-100" src="images/logos/sdg.png" alt="people">
+                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                          <img src="transparent.png" style="width: 100%; height: 100%; opacity: 0;">
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 grid-margin stretch-card mb-0">
+              <div class="mcard">
+                  <blockquote class="">
+                    <p class="mb-0 abc">The <b>AMIA program</b> envisions the Philippines where all communities, especially those dependent on agriculture and fisheries, would become resilient to the increasing adverse effects of climate change.​</p>
+              </div>
+            </div>
+            <div class="col-md-12 grid-margin stretch-card mb-0">
+              <div class="mcard">
+                  <blockquote class="">
+                    <p class="mb-0 abc">In pursuit of this vision, the program has set up communities called AMIA Villages, which serve as “go-to places” or lighthouses where farmers learn different climate resilient agriculture practices and technologies, helping them avoid, adjust, and recover from the impacts of climate change.​</p>
+              </div>
+            </div>
+            <div class="col-md-12 grid-margin mb-0">
+              <div class="row">
+                <div class="col-12 col-xl-8 mb-4 mb-xl-0 mb-0">
+                  <h3 class="font-weight-bold mb-3 mt-3">Support Services Provided to AMIA Villages</h3>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-12 grid-margin mb-0">
+              <div class="row">
+            <div class="col-lg-4 grid-margin stretch-card mb-3">
+              <div class="card hover-cursor mb-0">
+                <div class="card-body mb-0">
+                  <h4 class="card-title">Technological-Based Solutions</h4>
+                  <ul class="list-star">
+                    <li>Community-Level Climate-Resilient Agri-fisheries Technologies</li>
+                    <li>Climate Information Services (CIS)</li>
+                    <li>Computer-Aided Decision-Making Technology</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 grid-margin stretch-card mb-3">
+              <div class="card hover-cursor mb-0">
+                <div class="card-body mb-0">
+                  <h4 class="card-title">Capacity Building and Training</h4>
+                  <ul class="list-star">
+                    <li>Training on CCA and DRR-Productivity Enhancing Practices and Technologies</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 grid-margin stretch-card mb-3">
+              <div class="card hover-cursor mb-0">
+                <div class="card-body mb-0">
+                  <h4 class="card-title">Economic and Market Access</h4>
+                  <ul class="list-star">
+                    <li>Links to Market</li>
+                    <li>Easy Access to Credit and Affordable Insurance</li>
+                  </ul>
+                </div>
+              </div>
+            </div></div>
+        <!-- main-panel ends -->
+      </div>
+        <!-- content-wrapper ends -->
+        <!-- partial:partials/_footer -->
+        <footer class="footer">
+          <div class="d-sm-flex justify-content-center justify-content-sm-between">
+            <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2024. <a href="../../index">AMIA Caraga </a>| All rights reserved.</span>
+          </div>
+        </footer>
+        <!-- partial -->
+      </div>
+      <!-- main-panel ends -->
+    </div>   
+    <!-- page-body-wrapper ends -->
+  </div>
+  <!-- container-scroller -->
+  <!-- plugins:js -->
+  <script src="vendors/js/vendor.bundle.base.js"></script>
+  <!-- endinject -->
+  <!-- Plugin js for this page -->
+  <script src="vendors/chart.js/Chart.min.js"></script>
+  <script src="vendors/datatables.net/jquery.dataTables.js"></script>
+  <script src="vendors/datatables.net-bs4/dataTables.bootstrap4.js"></script>
+  <script src="js/dataTables.select.min.js"></script>
+  <!-- End plugin js for this page -->
+  <!-- inject:js -->
+  <script src="js/off-canvas.js"></script>
+  <script src="js/hoverable-collapse.js"></script>
+  <script src="js/template.js"></script>
+  <script src="js/settings.js"></script>
+  <script src="js/todolist.js"></script>
+  <!-- endinject -->
+  <!-- Custom js for this page-->
+  <script src="js/dashboard.js"></script>
+  <script src="js/Chart.roundedBarCharts.js"></script>
+  <!-- End custom js for this page-->
 </body>
 </html>
+
