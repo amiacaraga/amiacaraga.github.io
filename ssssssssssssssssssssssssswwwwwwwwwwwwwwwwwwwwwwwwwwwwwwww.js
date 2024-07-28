@@ -13,16 +13,6 @@
         // Initialize Firebase
         firebase.initializeApp(firebaseConfig);
 
-        // Check if user is already logged in
-
-
-        // Redirect to home if user is already logged in
-        firebase.auth().onAuthStateChanged(function(user) {
-            if (user && window.location.pathname === 'https://amiacaraga.github.io/login.html') {
-            window.location.href = "home.html";
-            }
-        });
-
         function login() {
             var email = document.getElementById('email').value;
             var password = document.getElementById('password').value;
