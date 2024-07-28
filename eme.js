@@ -1,8 +1,3 @@
-
-        // Firebase configuration
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js";
-        import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js";
-
         const firebaseConfig = {
             apiKey: "AIzaSyBvCo3oKxF7VaGyvqzcXl4BYEYmzgAkyVM",
             authDomain: "amia-caraga-website.firebaseapp.com",
@@ -23,6 +18,6 @@
         // Redirect to home if user is already logged in
         onAuthStateChanged(auth, (user) => {
             if (user) {
-                window.location.href = "home.html";
+                window.location.href = 'home*.html';
             }
         });
