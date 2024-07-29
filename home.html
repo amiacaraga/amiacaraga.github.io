@@ -1,418 +1,485 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AMIA Caraga MIS</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta property="og:image" content="https://firebasestorage.googleapis.com/v0/b/photos-cd20a.appspot.com/o/success-stories.jpg?alt=media&token=a021fe5d-6964-4d9e-92c2-4b4f27ddcee3" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://amia-caraga.github.io/site/p/g/success-stories"/>
-    <link rel="stylesheet" href="vendors/feather/feather.css">
-    <link rel="stylesheet" href="vendors/ti-icons/css/themify-icons.css">
-    <link rel="stylesheet" href="vendors/css/vendor.bundle.base.css">
-    <link rel="stylesheet" href="css/vertical-layout-light/style.css">
-    <link rel="shortcut icon" href="images/favicon.png" />
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: white;
-        }
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AMIA Caraga MIS</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta property="og:image" content="https://firebasestorage.googleapis.com/v0/b/photos-cd20a.appspot.com/o/success-stories.jpg?alt=media&token=a021fe5d-6964-4d9e-92c2-4b4f27ddcee3" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://amia-caraga.github.io/site/p/g/success-stories"/>
+<link rel="stylesheet" href="vendors/feather/feather.css">
+<link rel="stylesheet" href="vendors/ti-icons/css/themify-icons.css">
+<link rel="stylesheet" href="vendors/css/vendor.bundle.base.css">
+<link rel="stylesheet" href="css/vertical-layout-light/style.css">
+<link rel="shortcut icon" href="images/favicon.png" />
+<style>
+    body {
+    font-family: Arial, Helvetica, sans-serif;
+    }
 
-        .navbar {
-            display: flex;
-            justify-content: space-around;
-            background-color: #FDA92A;
-            padding: 1rem;
-        }
+    .topnav {
+    overflow: hidden;
+    background-color: #333;
+    position: relative;
+    }
 
-        .navbar a {
-            color: white;
-            text-decoration: none;
-            padding: 0.5rem 1rem;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-        }
+    .topnav #myLinks {
+    display: none;
+    }
 
-        .navbar a:hover {
-            background-color: white;
-            color: #FDA92A;
-        }
+    .topnav a {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+    }
 
-        .logout-button {
-            background-color: #ff4d4d;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            padding: 0.5rem 1rem;
-            cursor: pointer;
-            transition: background-color 0.3s;
-            width: 90px;
-        }
+    .topnav a.icon {
+    background: black;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    }
 
-        .logout-button:hover {
-            background-color: #cc0000;
-        }
+    .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+    }
 
-        .content {
-            padding: 2rem;
-            text-align: center;
-        }
+    .active {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    }
+</style>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: white;
+    }
 
-        .home, .success-story, .job-opportunity, .success-story-form, .job-opportunity-form {
-            display: none;
-        }
+    .navbar {
+        display: flex;
+        justify-content: space-around;
+        background-color: #FDA92A;
+        padding: 1rem;
+    }
 
-        .active {
-            display: block;
-        }
+    .navbar a {
+        color: white;
+        text-decoration: none;
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+    }
 
-        form {
-            width: 100%;
-            max-width: 600px;
-            background-color: #fff;
-            padding: 40px;
-            padding-right: 60px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            margin: 0 auto;
-            text-align: left;
-        }
+    .navbar a:hover {
+        background-color: white;
+        color: #FDA92A;
+    }
 
-        h2 {
-            text-align: center;
-            font-size: 24px;
-            margin-bottom: 20px;
-            color: #333;
-        }
+    .logout-button {
+        background-color: #ff4d4d;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 0.5rem 1rem;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        width: 90px;
+    }
 
-        .form-group {
-            margin-bottom: 1px;
-            display: flex;
-            flex-direction: column;
-        }
+    .logout-button:hover {
+        background-color: #cc0000;
+    }
 
-        label {
-            margin-bottom: 5px;
-            color: #333;
-            font-weight: bold;
-        }
+    .content {
+        padding: 2rem;
+        text-align: center;
+    }
 
-        input, textarea {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 14px;
-        }
+    .home, .success-story, .job-opportunity, .success-story-form, .job-opportunity-form {
+        display: none;
+    }
 
-        textarea {
-            resize: vertical;
-        }
+    .active {
+        display: block;
+    }
 
-        button {
-            width: 100%;
-            padding: 10px;
-            font-size: 16px;
-            background-color: #FDA92A;
-            border: none;
-            color: white;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
+    form {
+        width: 100%;
+        max-width: 600px;
+        background-color: #fff;
+        padding: 40px;
+        padding-right: 60px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin: 0 auto;
+        text-align: left;
+    }
 
-        button:hover {
-            background-color: #b6710a;
-        }
+    h2 {
+        text-align: center;
+        font-size: 24px;
+        margin-bottom: 20px;
+        color: #333;
+    }
 
-        table {
-            width: 100%;
-            max-width: 600px;
-            margin: 20px auto;
-            border-collapse: collapse;
-            background-color: #fff;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
+    .form-group {
+        margin-bottom: 1px;
+        display: flex;
+        flex-direction: column;
+    }
 
-        table th, table td {
-            padding: 10px;
-            border: 1px solid #ddd;
-            text-align: left;
-        }
+    label {
+        margin-bottom: 5px;
+        color: #333;
+        font-weight: bold;
+    }
 
-        table th {
-            background-color: #f4f4f4;
-            font-weight: bold;
-        }
+    input, textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 14px;
+    }
 
-        .delete-button {
-            background-color: #ff4d4d;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            padding: 5px 10px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
+    textarea {
+        resize: vertical;
+    }
 
-        .delete-button:hover {
-            background-color: #cc0000;
-        }
+    button {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        background-color: #FDA92A;
+        border: none;
+        color: white;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
 
-        /* Modal Styles */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgb(0,0,0);
-            background-color: rgba(0,0,0,0.4);
-        }
+    button:hover {
+        background-color: #b6710a;
+    }
 
-        .modal-content {
-            background-color: #fefefe;
-            margin: 15% auto;
-            padding: 20px;
-            border: 1px solid #888;
-            width: 80%;
-            max-width: 400px;
-            text-align: center;
-            border-radius: 10px;
-        }
+    table {
+        width: 100%;
+        max-width: 600px;
+        margin: 20px auto;
+        border-collapse: collapse;
+        background-color: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
 
-        #confirm-delete-yyy {
-            margin-bottom: 10px; /* Add spacing between the buttons */
-        }
+    table th, table td {
+        padding: 10px;
+        border: 1px solid #ddd;
+        text-align: left;
+    }
 
-        .close {
-            color: #aaa;
-            float: right;
-            font-size: 28px;
-            font-weight: bold;
-        }
+    table th {
+        background-color: #f4f4f4;
+        font-weight: bold;
+    }
 
-        .close:hover,
-        .close:focus {
-            color: black;
-            text-decoration: none;
-            cursor: pointer;
+    .delete-button {
+        background-color: #ff4d4d;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 5px 10px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .delete-button:hover {
+        background-color: #cc0000;
+    }
+
+    /* Modal Styles */
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgb(0,0,0);
+        background-color: rgba(0,0,0,0.4);
+    }
+
+    .modal-content {
+        background-color: #d3d3d3;
+        margin: 15% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+        max-width: 400px;
+        text-align: center;
+        border-radius: 10px;
+    }
+
+    #confirm-delete-yyy {
+        margin-bottom: 10px; /* Add spacing between the buttons */
+    }
+
+    .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    .topnav a.logout:hover {
+            background-color: #d3d3d3;
+            color: #ea2727; /* Change text color on hover if needed */
         }
-    </style>
+</style>
 </head>
 <body>
-    <nav class="navbar">
-        <a href="#home" onclick="showSection('home')">Home</a>
-        <a href="#success-story" onclick="showSection('success-story-form')">Success Story</a>
-        <a href="#job-opportunity" onclick="showSection('job-opportunity-form')">Job Opportunity</a>
-        <a href="https://amiacaraga.github.io">Website</a>
-        <button class="logout-button" onclick="logout()">Logout</button>
-    </nav>
 
-    <div class="content">
-        <div id="home" class="home active">
-            <div class="content-wrapper">
-                <div class="row mb-3">
-                  <div class="col-md-12 grid-margin mb-3">
-                    <div class="row">
-                      <div class="col-12 col-xl-8 mb-3 mb-xl-2">
-                        <h3 class="font-weight-bold">Adaptation and Mitigation Initiative in Agriculture</h3>
-                        <h6 class="font-weight-normal mb-0"><span class="text-primary">Building farming and fishing communities, livelihoods, and enterprises resilient to economic and climate shocks.</span></h6>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                
+<div class="topnav">
+  <a href="#home" class="active" onclick="showSection('home')" style="color: white; background-color: #FDA92A;">Home</a>
+  <div id="myLinks">
+    <a href="#success-story" onclick="showSection('success-story-form')">Success Story</a>
+    <a href="#job-opportunity" onclick="showSection('job-opportunity-form')">Job Opportunity</a>
+    <a href="https://amiacaraga.github.io">Website</a>
+    <a href="#" onclick="logout()" class="logout">Logout</a>
+  </div>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+
+<div class="content">
+    <div id="home" class="home active">
+        <div class="">
+            <div class="row mb-3">
+              <div class="col-md-12 grid-margin mb-3">
                 <div class="row">
-                  <div class="col-md-6 mb-3 stretch-card">
-                    <div class="card tale-bg">
-                        <div class="card-people">
-                            <img class="w-100" src="images/logos/people.svg" alt="people">
-                            <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
-                              <img src="transparent.png" style="width: 100%; height: 100%; opacity: 0;">
-                          </div>
-                        </div>
-                    </div>
-                  </div>
-                  <div class="col-md-6 mb-0 grid-margin transparent">
-                    <div class="row mb-0 ">
-                      <div class="col-md-6 mb-3 stretch-card transparent">
-                        <div class="card card-tale">
-                          <div class="card-body">
-                            <p class="mb-4">The AMIA Approach can be adopted in DA Programs towards climate-risk based planning & delivery of interventions.</p>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-md-6 mb-3 stretch-card transparent">
-                        <div class="card card-dark-blue">
-                          <div class="card-body">
-                            <p class="mb-4">AMIA is a building block for the Farm & Fisheries Clustering & Consolidation (F2C2) Program.</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-md-6 mb-3 stretch-card transparent mb-0">
-                        <div class="card card-light-blue">
-                          <div class="card-body">
-                            <p class="mb-4">Transformation of climate-resilient communities into climate-resilient business enterprises.</p>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-md-6 mb-3 stretch-card transparent mb-0">
-                        <div class="card card-light-danger">
-                          <div class="card-body">
-                            <p class="mb-4">Climate-risk based deployment of technologies and tailor-fitted & integrated support services.</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                  <div class="col-12 col-xl-8 mb-3 mb-xl-2">
+                    <h3 class="font-weight-bold">Adaptation and Mitigation Initiative in Agriculture</h3>
+                    <h6 class="font-weight-normal mb-0"><span class="text-primary">Building farming and fishing communities, livelihoods, and enterprises resilient to economic and climate shocks.</span></h6>
                   </div>
                 </div>
-                  
-                  <div class="col-md-12 grid-margin stretch-card mb-0">
-                    <div class="mcard">
-                        <blockquote class="">
-                          <p class="mb-0 abc">The <b>AMIA program</b> envisions the Philippines where all communities, especially those dependent on agriculture and fisheries, would become resilient to the increasing adverse effects of climate change.​</p>
-                    </div>
-                  </div>
-                  <div class="col-md-12 grid-margin stretch-card mb-0">
-                    <div class="mcard">
-                        <blockquote class="">
-                          <p class="mb-0 abc">In pursuit of this vision, the program has set up communities called AMIA Villages, which serve as “go-to places” or lighthouses where farmers learn different climate resilient agriculture practices and technologies, helping them avoid, adjust, and recover from the impacts of climate change.​</p>
-                    </div>
-                  </div>
-                  
-                  
-              <!-- main-panel ends -->
+              </div>
+            </div>
             
-              <!-- content-wrapper ends -->
-              <!-- partial:partials/_footer -->
+            <div class="row">
+              <div class="col-md-6 mb-3 stretch-card">
+                <div class="card tale-bg">
+                    <div class="card-people">
+                        <img class="" src="images/logos/people.svg" alt="people">
+                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                          <img src="transparent.png" style="width: 100%; height: 100%; opacity: 0;">
+                      </div>
+                    </div>
+                </div>
+              </div>
+              <div class="col-md-6 mb-0 grid-margin transparent">
+                <div class="row mb-0 ">
+                  <div class="col-md-6 mb-3 stretch-card transparent">
+                    <div class="card card-tale">
+                      <div class="card-body">
+                        <p class="mb-4">The AMIA Approach can be adopted in DA Programs towards climate-risk based planning & delivery of interventions.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-3 stretch-card transparent">
+                    <div class="card card-dark-blue">
+                      <div class="card-body">
+                        <p class="mb-4">AMIA is a building block for the Farm & Fisheries Clustering & Consolidation (F2C2) Program.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6 mb-3 stretch-card transparent mb-0">
+                    <div class="card card-light-blue">
+                      <div class="card-body">
+                        <p class="mb-4">Transformation of climate-resilient communities into climate-resilient business enterprises.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-3 stretch-card transparent mb-0">
+                    <div class="card card-light-danger">
+                      <div class="card-body">
+                        <p class="mb-4">Climate-risk based deployment of technologies and tailor-fitted & integrated support services.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
               
-              <!-- partial -->
-          <!-- page-body-wrapper ends -->
+              <div class="col-md-12 grid-margin stretch-card mb-0">
+                <div class=">
+                    <blockquote class="">
+                      <p class="mb-0 abc">The <b>AMIA program</b> envisions the Philippines where all communities, especially those dependent on agriculture and fisheries, would become resilient to the increasing adverse effects of climate change.​</p>
+                </div>
+              </div>
+              <div class="col-md-12 grid-margin stretch-card mb-0">
+                <div class="">
+                    <blockquote class="">
+                      <p class="mb-0 abc">In pursuit of this vision, the program has set up communities called AMIA Villages, which serve as “go-to places” or lighthouses where farmers learn different climate resilient agriculture practices and technologies, helping them avoid, adjust, and recover from the impacts of climate change.​</p>
+                </div>
+              </div>
+              
+              
+          <!-- main-panel ends -->
+        
+          <!-- content-wrapper ends -->
+          <!-- partial:partials/_footer -->
+          
+          <!-- partial -->
+      <!-- page-body-wrapper ends -->
+        </div>
+    </div>
+    <div id="success-story-form" class="success-story-form">
+        <div class="row">
+            <div class="col-md-6">
+                <table id="data-table-story">
+                    <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Author</th>
+                            <th>Date</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table></div>
+            <div class="col-md-6">
+                <form>
+                    <div class="form-group">
+                        <label for="image">Image Link</label>
+                        <input type="text" id="image" placeholder="https://example.com/image.png"><br>
+                    </div>
+                    <div class="form-group">
+                        <label for="title">Title</label>
+                        <input type="text" id="title" placeholder="Title should not exceed 25 words."><br>
+                    </div>
+                    <div class="form-group">
+                        <label for="date">Date</label>
+                        <input type="date" id="date"><br>
+                    </div>
+                    <div class="form-group">
+                        <label for="author">Author</label>
+                        <input type="text" id="author" placeholder="Author"><br>
+                    </div>
+                    <div class="form-group">
+                        <label for="office">Office</label>
+                        <input type="text" id="office" placeholder="Office"><br>
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Description</label>
+                        <input type="text" id="description" placeholder="Description should not exceed 25 words."><br>
+                    </div>
+                    <div class="form-group">
+                        <label for="content">Content</label>
+                        <input type="text" id="content" placeholder="Content should not exceed 3000 words."><br>
+                    </div>
+                    <div class="form-group">
+                        <button type="button" id="insert-story">Insert</button>
+                    </div>
+                </form>
             </div>
         </div>
-        <div id="success-story-form" class="success-story-form">
-            <div class="row">
-                <div class="col-md-6">
-                    <table id="data-table-story">
-                        <thead>
-                            <tr>
-                                <th>Title</th>
-                                <th>Author</th>
-                                <th>Date</th>
-                                <th>Action</th>
-                            </tr>
-                        </thead>
-                        <tbody></tbody>
-                    </table></div>
-                <div class="col-md-6">
-                    <form>
-                        <div class="form-group">
-                            <label for="image">Image Link</label>
-                            <input type="text" id="image" placeholder="https://example.com/image.png"><br>
-                        </div>
-                        <div class="form-group">
-                            <label for="title">Title</label>
-                            <input type="text" id="title" placeholder="Title should not exceed 25 words."><br>
-                        </div>
-                        <div class="form-group">
-                            <label for="date">Date</label>
-                            <input type="date" id="date"><br>
-                        </div>
-                        <div class="form-group">
-                            <label for="author">Author</label>
-                            <input type="text" id="author" placeholder="Author"><br>
-                        </div>
-                        <div class="form-group">
-                            <label for="office">Office</label>
-                            <input type="text" id="office" placeholder="Office"><br>
-                        </div>
-                        <div class="form-group">
-                            <label for="description">Description</label>
-                            <input type="text" id="description" placeholder="Description should not exceed 25 words."><br>
-                        </div>
-                        <div class="form-group">
-                            <label for="content">Content</label>
-                            <input type="text" id="content" placeholder="Content should not exceed 3000 words."><br>
-                        </div>
-                        <div class="form-group">
-                            <button type="button" id="insert-story">Insert</button>
-                        </div>
-                    </form>
-                </div>
+    </div>
+    <div id="job-opportunity-form" class="job-opportunity-form">
+        <div class="row">
+            <div class="col-md-6">
+                <table id="data-table-job">
+                    <thead>
+                        <tr>
+                            <th>Assignment</th>
+                            <th>Position</th>
+                            <th>Salary Grade</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
             </div>
-        </div>
-        <div id="job-opportunity-form" class="job-opportunity-form">
-            <div class="row">
-                <div class="col-md-6">
-                    <table id="data-table-job">
-                        <thead>
-                            <tr>
-                                <th>Assignment</th>
-                                <th>Position</th>
-                                <th>Salary Grade</th>
-                                <th>Action</th>
-                            </tr>
-                        </thead>
-                        <tbody></tbody>
-                    </table>
-                </div>
-                <div class="col-md-6">
-                    <form>
-                        <div class="form-group">
-                            <label for="postingNumber">Posting Number</label>
-                            <input type="text" id="postingNumber" placeholder="Posting Number"><br>
-                        </div>
-                        <div class="form-group">
-                            <label for="assignment">Place of Assignment</label>
-                            <input type="text" id="assignment" placeholder="Place of Assignment"><br>
-                        </div>
-                        <div class="form-group">
-                            <label for="position">Position</label>
-                            <input type="text" id="position" placeholder="Position"><br>
-                        </div>
-                        <div class="form-group">
-                            <label for="salaryGrade">Salary Grade</label>
-                            <input type="text" id="salaryGrade" placeholder="Salary Grade"><br>
-                        </div>
-                        <div class="form-group">
-                            <label for="deadline">Deadline of Submission</label>
-                            <input type="date" id="deadline"><br>
-                        </div>
-                        <div class="form-group">
-                            <label for="link">File Google Drive Link</label>
-                            <input type="text" id="link" placeholder="https://drive.google.example"><br>
-                        </div>
-                        <div class="form-group">
-                            <button type="button" id="insert-job">Insert</button>
-                        </div>
-                    </form>
-                </div>
+            <div class="col-md-6">
+                <form>
+                    <div class="form-group">
+                        <label for="postingNumber">Posting Number</label>
+                        <input type="text" id="postingNumber" placeholder="Posting Number"><br>
+                    </div>
+                    <div class="form-group">
+                        <label for="assignment">Place of Assignment</label>
+                        <input type="text" id="assignment" placeholder="Place of Assignment"><br>
+                    </div>
+                    <div class="form-group">
+                        <label for="position">Position</label>
+                        <input type="text" id="position" placeholder="Position"><br>
+                    </div>
+                    <div class="form-group">
+                        <label for="salaryGrade">Salary Grade</label>
+                        <input type="text" id="salaryGrade" placeholder="Salary Grade"><br>
+                    </div>
+                    <div class="form-group">
+                        <label for="deadline">Deadline of Submission</label>
+                        <input type="date" id="deadline"><br>
+                    </div>
+                    <div class="form-group">
+                        <label for="link">File Google Drive Link</label>
+                        <input type="text" id="link" placeholder="https://drive.google.example"><br>
+                    </div>
+                    <div class="form-group">
+                        <button type="button" id="insert-job">Insert</button>
+                    </div>
+                </form>
             </div>
-        </div>
-
-    <!-- Modal Structure -->
-    <div id="delete-modal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <p>Are you sure you want to delete this?</p>
-            <button id="confirm-delete-yyy">Yes</button>
-            <button id="close-modal">No</button>
         </div>
     </div>
 
-    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-database.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-auth.js"></script>
-    <script src="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaahhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhrrrrrrrrrrrrrrrrrr.js"></script>
+<!-- Modal Structure -->
+<div id="delete-modal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Are you sure you want to delete this?</p>
+        <button id="confirm-delete-yyy">Yes</button>
+        <button id="close-modal">No</button>
+    </div>
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-auth.js"></script>
+<script src="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaahhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhrrrrrrrrrrrrrrrrrr.js"></script>
+
+
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myLinks");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+</script>
+
 </body>
 </html>
