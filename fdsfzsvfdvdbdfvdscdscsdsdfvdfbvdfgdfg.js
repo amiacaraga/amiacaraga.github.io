@@ -12,8 +12,8 @@ const firebaseConfig = {
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 firebase.auth().onAuthStateChanged(function(user) {
-    if (user && window.location.pathname === '/login.html') {
-    window.location.href = "home.html";
+    if (user && window.location.pathname === '/login') {
+    window.location.href = "home";
     }
 });
 
@@ -28,7 +28,7 @@ function register() {
 
     firebase.auth().createUserWithEmailAndPassword(email, password)
         .then(function() {
-            window.location.href = "home.html";
+            window.location.href = "home";
         })
         .catch(function(error) {
             var error_message = error.message;

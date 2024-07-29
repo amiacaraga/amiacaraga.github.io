@@ -18,7 +18,7 @@ if (!firebase.apps.length) {
 firebase.auth().onAuthStateChanged(function(user) {
     if (!user) {
         console.log("No user is signed in.");
-        window.location.href = "login.html";
+        window.location.href = "login";
     }
 });
 

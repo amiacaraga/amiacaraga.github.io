@@ -34,7 +34,7 @@
 
             firebase.auth().signInWithEmailAndPassword(email, password)
                 .then(function() {
-                    window.location.href = "home.html";
+                    window.location.href = "home";
                 })
                 .catch(function(error) {
                     var error_message = error.message;
