@@ -48,7 +48,7 @@ function register() {
 
             // Done
             alert('User Created!');
-            window.location.href = "home.html";
+            window.location.href = "home";
         })
         .catch(function(error) {
             // Firebase will use this to alert of its errors
@@ -73,7 +73,7 @@ function login() {
     auth.signInWithEmailAndPassword(email, password)
         .then(function() {
             // Redirect to home page on successful login
-            window.location.href = "home.html";
+            window.location.href = "home";
         })
         .catch(function(error) {
             // Firebase will use this to alert of its errors
@@ -84,7 +84,7 @@ function login() {
 
 function logout() {
     auth.signOut().then(() => {
-        window.location.href = "login.html";
+        window.location.href = "login";
     }).catch((error) => {
         console.error("Sign out error:", error);
     });

@@ -19,7 +19,7 @@
         // Redirect to home if user is already logged in
         firebase.auth().onAuthStateChanged(function(user) {
             if (user) {
-            window.location.href = 'home*.html';
+            window.location.href = 'home*';
             }
         });
 

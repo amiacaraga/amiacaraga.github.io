@@ -2,7 +2,7 @@
   "name": "SkyDash_admin",
   "version": "1.2.1",
   "description": "",
-  "main": "index.html",
+  "main": "index",
   "dependencies": {
     "@mdi/font": "^3.6.95",
     "ace-builds": "^1.2.9",

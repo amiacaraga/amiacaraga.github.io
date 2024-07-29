@@ -278,14 +278,14 @@ window.onload = function() {
             displayStoryData();
             displayJobData();
         } else {
-            window.location.href = "login.html";
+            window.location.href = "login";
         }
     });
 };
 
 function logout() {
     firebase.auth().signOut().then(() => {
-        window.location.href = "login.html";
+        window.location.href = "login";
     }).catch((error) => {
         console.error("Sign out error:", error);
     });
